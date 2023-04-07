@@ -10,9 +10,9 @@ end
 
 Citizen.CreateThread(function()
     while true do
-    local Speed = GetEntitySpeed(GetVehiclePedIsIn(GetPlayerPed(-1), false)) * 3.6 
+    local Speed = GetEntitySpeed(GetVehiclePedIsIn(GetPlayerPed(), false)) * 3.6 
 
-    if IsPedInAnyVehicle(GetPlayerPed(-1)) ~= 0 then 
+    if IsPedInAnyVehicle(GetPlayerPed()) ~= 0 then 
         DrawText(tostring(math.floor(Speed + 0.5)) .. " KM/H") -- KMH / MPH
     else
         Citizen.Wait(100)
